@@ -1,3 +1,24 @@
-body {
-  background: blue;
-}
+// font
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+// abstracts 
+@import './abstracts/extends';
+@import './abstracts/variables';
+@import './abstracts/mixins';
+// base
+@import './base/animations';
+@import './base/base';
+@import './base/typography';
+@import './base/utilities';
+// components
+@import './components/hamburger';
+@import './components/search';
+@import './components/favourites';
+@import './components/icons';
+@import './components/buttons';
+// layout
+@import './layout/header';
+@import './layout/overlay';
+// pages
+@import './pages/home';
+
+

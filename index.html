@@ -4,11 +4,122 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Top rated movies database</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css">
-  <script src="scripts/main.js" type="module"></script>
+  <script src="scripts/controller.js" type="module"></script>
 </head>
 <body>
-  
+  <div class="overlay">
+    <div class="overlay__movies-genres">
+      <ul class="overlay__element overlay__list">
+        <li class="overlay__list__item overlay__list__item-1">
+          <a href="#" class="overlay__list__category overlay__list__category-1">Main page</a>
+        </li>
+        <li class="overlay__list__item overlay__list__item-2">
+          <a href="#" class="overlay__list__category overlay__list__category-2">Fantasies</a>
+        </li>
+        <li class="overlay__list__item overlay__list__item-3">
+          <a href="#" class="overlay__list__category overlay__list__category-3">Comedies</a>
+        </li>
+        <li class="overlay__list__item overlay__list__item-4">
+          <a href="#" class="overlay__list__category overlay__list__category-4">Adventures</a>
+        </li>
+        <li class="overlay__list__item overlay__list__item-5">
+          <a href="#" class="overlay__list__category overlay__list__category-5">Horrors</a>
+        </li>
+        <li class="overlay__list__item overlay__list__item-6">
+          <a href="#" class="overlay__list__category overlay__list__category-6">Thrillers</a>
+        </li>
+        <li class="overlay__list__item overlay__list__item-7">
+          <a href="#" class="overlay__list__category overlay__list__category-7">Romances</a>
+        </li>
+        <li class="overlay__list__item overlay__list__item-8">
+          <a href="#" class="overlay__list__category overlay__list__category-8">Historical films</a>
+        </li>
+        <li class="overlay__list__item overlay__list__item-9">
+          <a href="#" class="overlay__list__category overlay__list__category-9">War films</a>
+        </li>
+        <li class="overlay__list__item overlay__list__item-10">
+          <a href="#" class="overlay__list__category overlay__list__category-10">Films for families</a>
+        </li>
+      </ul>
+    </div>
+    <div class="overlay__search-movie">
+      <form class="search-box">
+        <input type="text" name="search-movie" id="search-movie" placeholder="Search movies you want">
+      </form>
+      <i class="fa-solid fa-magnifying-glass search search--overlay"></i>
+    </div>
+  </div>
+  <header>
+    <nav class="nav">
+      <!-- Left side of nav, hamburger -->
+        <div class="nav__element">
+          <div class="nav__hamburger hamburger">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+          </div>
+        </div>
+      <!-- right side of nav, search and fav list -->
+        <div class="nav__element">
+          <i class="fa-solid fa-magnifying-glass search search--nav"></i>
+        </div>
+        <div class="nav__element">
+          <div class="nav__section">
+            <i class="fa-solid fa-heart fa-heart-nav" id="heart"></i>
+            <span class="span span--navigation">Favourites</span>
+          </div>
+          <div class="favourites">
+            <ul class="favourites__list">
+              <li class="favourites__item">
+                <div class="favourites__img">
+                </div>
+                <div class="favourites__content">
+                  <h4 class="favourites__title title--quaternary">The curious case of Bedgamin button<span class="span--year">(1999)</span></h4>
+                  <div class="favourites__info">
+                    <span class="span--rating-small">Rate: 8.6</span>
+                    <span class="btn btn--delete-fav">Delete</span>
+                  </div>
+                </div>
+              </li>
+              <li class="favourites__item">
+                <div class="favourites__img">
+                </div>
+                <div class="favourites__content">
+                  <h4 class="favourites__title title--quaternary">The curious case of Bedgamin button<span class="span--year">(1999)</span></h4>
+                  <div class="favourites__info">
+                    <span class="span--rating-small">Rate: 8.6</span>
+                    <span class="btn btn--delete-fav">Delete</span>
+                  </div>
+                </div>
+              </li>
+              <li class="favourites__item"> 
+                <div class="favourites__img">
+                </div>
+                <div class="favourites__content">
+                  <h4 class="favourites__title title--quaternary">The curious case of Bedgamin button<span class="span--year">(1999)</span></h4>
+                  <div class="favourites__info">
+                    <span class="span--rating-small">Rate: 8.6</span>
+                    <span class="btn btn--delete-fav">Delete</span>
+                  </div>
+                </div>
+              </li>
+              <li class="favourites__pagination">
+                <button class="btn btn--pagination btn--pagination--prev">Previous</button>
+                <button class="btn btn--pagination btn--pagination--next">Next</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    
+    </div>
+  </header>
+  <main>
+    
+  </main>
+  <footer></footer>
 </body>
 </html>

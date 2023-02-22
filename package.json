@@ -4,11 +4,11 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "compile:sass": "node-sass scss/style.scss css/style.css -rw"
+    "compile:sass": "node-sass scss/style.scss css/style.css -w"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "node-sass": "^8.0.0"
   }
 }
