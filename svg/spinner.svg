@@ -1,0 +1,11 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 207px; height: 207px;"><style>
+     .line-movie-reel1 {animation:line-movie-reel1 2s linear infinite; transform-origin: 49.5px 50.5px;}
+     @keyframes line-movie-reel1 {
+         100%{transform: rotate(360deg);}
+     }
+     @media (prefers-reduced-motion: reduce) {
+         .line-movie-reel1 {
+             animation: none;
+         }
+     }
+    </style><path class="fill1" d="M89 50.5C89 72.3152 71.3152 90 49.5 90C27.6848 90 10 72.3152 10 50.5C10 28.6848 27.6848 11 49.5 11C71.3152 11 89 28.6848 89 50.5Z" fill="rgba(255,255,255,1)" stroke-width="1.8px" style="animation-duration: 1.9s;"></path><path class="stroke1" d="M49.5 11C27.6848 11 10 28.6848 10 50.5C10 72.3152 27.6848 90 49.5 90C71.3152 90 89 72.3152 89 50.5C89 28.6848 71.3152 11 49.5 11ZM49.5 11H90" stroke="#000" stroke-width="1.8px" style="animation-duration: 1.9s;"></path><g class="line-movie-reel1" style="animation-duration: 1.9s;"><circle class="stroke1 fill1" cx="49.5" cy="50.5" r="32.5" fill="rgba(255,255,255,1)" stroke="#000" stroke-width="1.8px" style="animation-duration: 1.9s;"></circle><circle class="stroke2 fill2" cx="49.5" cy="50.5" r="3.5" fill="rgba(158,22,195,1)" stroke="#000" stroke-width="1.8px"></circle><circle class="stroke2 fill2" cx="49.5" cy="33.5" r="8.5" fill="rgba(158,22,195,1)" stroke="#000" stroke-width="1.8px"></circle><circle class="stroke2 fill2" cx="49.5" cy="68.5" r="8.5" fill="rgba(158,22,195,1)" stroke="#000" stroke-width="1.8px"></circle><circle class="stroke2 fill2" cx="67" cy="51" r="8.5" transform="rotate(90 67 51)" fill="rgba(158,22,195,1)" stroke="#000" stroke-width="1.8px"></circle><circle class="stroke2 fill2" cx="32" cy="51" r="8.5" transform="rotate(90 32 51)" fill="rgba(158,22,195,1)" stroke="#000" stroke-width="1.8px"></circle></g></svg>

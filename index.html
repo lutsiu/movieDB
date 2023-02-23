@@ -10,11 +10,11 @@
   <script src="scripts/controller.js" type="module"></script>
 </head>
 <body>
-  <div class="overlay">
+  <div class="overlay u-hidden">
     <div class="overlay__movies-genres">
       <ul class="overlay__element overlay__list">
         <li class="overlay__list__item overlay__list__item-1">
-          <a href="#" class="overlay__list__category overlay__list__category-1">Main page</a>
+          <a href="#home" class="overlay__list__category overlay__list__category-1">Main page</a>
         </li>
         <li class="overlay__list__item overlay__list__item-2">
           <a href="#" class="overlay__list__category overlay__list__category-2">Fantasies</a>
@@ -51,6 +51,59 @@
       </form>
       <i class="fa-solid fa-magnifying-glass search search--overlay"></i>
     </div>
+    <div class="overlay__favourites favourites">
+      <ul class="favourites__list">
+        <li class="favourites__item">
+          <div class="favourites__img">
+          </div>
+          <div class="favourites__content">
+            <h4 class="favourites__title title--quaternary">The curious case of Bedgamin button<span class="span--year">(1999)</span></h4>
+            <div class="favourites__info">
+              <span class="span--rating-small">Rate: 8.6</span>
+              <span class="btn btn--delete-fav">Delete</span>
+            </div>
+          </div>
+        </li>
+        <li class="favourites__item">
+          <div class="favourites__img">
+          </div>
+          <div class="favourites__content">
+            <h4 class="favourites__title title--quaternary">The curious case of Bedgamin button<span class="span--year">(1999)</span></h4>
+            <div class="favourites__info">
+              <span class="span--rating-small">Rate: 8.6</span>
+              <span class="btn btn--delete-fav">Delete</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="favourites__item"> 
+          <div class="favourites__img">
+          </div>
+          <div class="favourites__content">
+            <h4 class="favourites__title title--quaternary">The curious case of Bedgamin button<span class="span--year">(1999)</span></h4>
+            <div class="favourites__info">
+              <span class="span--rating-small">Rate: 8.6</span>
+              <span class="btn btn--delete-fav">Delete</span>
+            </div>
+          </div>
+        </li>
+        <li class="favourites__item"> 
+          <div class="favourites__img">
+          </div>
+          <div class="favourites__content">
+            <h4 class="favourites__title title--quaternary">The curious case of Bedgamin button<span class="span--year">(1999)</span></h4>
+            <div class="favourites__info">
+              <span class="span--rating-small">Rate: 8.6</span>
+              <span class="btn btn--delete-fav">Delete</span>
+            </div>
+          </div>
+        </li>
+        <li class="favourites__pagination">
+          <button class="btn btn--pagination btn--pagination--prev">Previous</button>
+          <button class="btn btn--pagination btn--pagination--next">Next</button>
+        </li>
+      </ul>
+    </div>
   </div>
   <header>
     <nav class="nav">
@@ -71,54 +124,27 @@
             <i class="fa-solid fa-heart fa-heart-nav" id="heart"></i>
             <span class="span span--navigation">Favourites</span>
           </div>
-          <div class="favourites">
-            <ul class="favourites__list">
-              <li class="favourites__item">
-                <div class="favourites__img">
-                </div>
-                <div class="favourites__content">
-                  <h4 class="favourites__title title--quaternary">The curious case of Bedgamin button<span class="span--year">(1999)</span></h4>
-                  <div class="favourites__info">
-                    <span class="span--rating-small">Rate: 8.6</span>
-                    <span class="btn btn--delete-fav">Delete</span>
-                  </div>
-                </div>
-              </li>
-              <li class="favourites__item">
-                <div class="favourites__img">
-                </div>
-                <div class="favourites__content">
-                  <h4 class="favourites__title title--quaternary">The curious case of Bedgamin button<span class="span--year">(1999)</span></h4>
-                  <div class="favourites__info">
-                    <span class="span--rating-small">Rate: 8.6</span>
-                    <span class="btn btn--delete-fav">Delete</span>
-                  </div>
-                </div>
-              </li>
-              <li class="favourites__item"> 
-                <div class="favourites__img">
-                </div>
-                <div class="favourites__content">
-                  <h4 class="favourites__title title--quaternary">The curious case of Bedgamin button<span class="span--year">(1999)</span></h4>
-                  <div class="favourites__info">
-                    <span class="span--rating-small">Rate: 8.6</span>
-                    <span class="btn btn--delete-fav">Delete</span>
-                  </div>
-                </div>
-              </li>
-              <li class="favourites__pagination">
-                <button class="btn btn--pagination btn--pagination--prev">Previous</button>
-                <button class="btn btn--pagination btn--pagination--next">Next</button>
-              </li>
-            </ul>
-          </div>
         </div>
     </nav>
     
     </div>
   </header>
   <main>
-    
+    <div class="container">
+      <div class="home" id="home">
+        <div class="home__content">
+          <h1 class="home__title title--main">Avengers: the end game</h1>
+          <p class="home__overview paragraph--main">"As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain."</p>
+          <div class="home__buttons">
+            <span class="btn btn--home"><i class="fa-solid fa-plus"></i>My list</span>
+            <span class="btn btn--home"><i class="fa-solid fa-info" data-film-id="299534"></i>Information</span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    </div>
   </main>
   <footer></footer>
 </body>

@@ -11,13 +11,14 @@
 @import './base/utilities';
 // components
 @import './components/hamburger';
-@import './components/search';
+@import './components/search';;
 @import './components/favourites';
 @import './components/icons';
 @import './components/buttons';
 // layout
-@import './layout/header';
+@import './layout/nav';
 @import './layout/overlay';
+@import './layout/container';
 // pages
 @import './pages/home';
 

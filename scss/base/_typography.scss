@@ -1,0 +1,63 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 1.7;
+  box-sizing: border-box;
+  color: $white;
+  background-color: $black-dark;
+  overflow: hidden;
+}
+.title {
+  &--main { 
+    font-size: 5rem;
+    font-weight: 900;
+    color: #e7dddd;
+    margin-left: 1rem;
+  }
+  &--quaternary {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+}
+.span {
+  text-transform: uppercase;
+  &--navigation {
+    font-size: 2rem;
+    letter-spacing: .3rem;
+    margin-top: -0.5rem;
+  }
+  &--year {
+    font-size: 1.3rem;
+    margin-left: .3rem;
+  }
+  &--rating-small {
+    font-size: 1.4rem;
+  }
+}
+.paragraph {
+
+  &--main {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .title {
+
+    &--main {
+      font-size: 4rem;
+    }
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  .title {
+
+    &--main {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+  }
+  
+}

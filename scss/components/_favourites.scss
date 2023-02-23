@@ -1,0 +1,59 @@
+.favourites {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  width: 23rem;
+  background-color: $black-genres;
+  transition: all .5s;
+  &__item {
+    display: flex;
+    padding: 1rem 1rem 1rem 0;
+    transition: all .5s;
+    border-radius: 1rem;
+    &:not(:last-child) {
+      height:23vh;
+      gap: 1rem;
+      cursor: pointer;
+    }
+    &:not(:last-child):hover {
+      background-color:$black-genres--hover;
+    }
+  }
+  &__img {
+    flex: 2;
+    background-image: url('https://image.tmdb.org/t/p/w500//kWYfW2Re0rUDE6IHhy4CRuKWeFr.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+  }
+  &__content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__poster {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    background-position: center;
+  }
+  &__pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+  }
+}
+
+/* @media screen and (max-width: 576px) {
+  .favourites {
+    transform: translateX(150%);
+  }
+} */

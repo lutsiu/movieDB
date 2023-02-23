@@ -1,0 +1,129 @@
+// hamburger rotation
+@keyframes rotateRight {
+  0% {
+    margin-top: 0;
+  }100% {
+    margin-top: 2rem;
+    transform: rotateZ(45deg);
+  }
+}
+@keyframes undoRotateRight {
+  0% {
+    transform: rotateZ(45deg);
+    margin-top: 2rem;
+  } 100% {
+    transform: rotateZ(0deg);
+    margin-top: 0;
+  }
+}
+@keyframes rotateLeft {
+  0% {
+    transform: rotateZ(0);
+  } 100% {
+    transform: rotateZ(-45deg);
+    margin-bottom: 1.5rem;
+  }
+}
+@keyframes undoRotateLeft {
+  0% {
+    transform: rotateZ(-45deg);
+    margin-bottom: 1.5rem;
+  } 100% {
+    transform: rotateZ(0deg);
+    margin-bottom: 0rem;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    z-index: 10;
+    opacity: 1;
+  } 100% {
+    z-index: -10;
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    z-index: -10;
+    opacity: 0;
+  } 100% {
+    z-index: 10;
+    opacity: 1;
+  }
+}
+@keyframes slide-to-right {
+  0% {
+    transform: translateX(-100%);
+  } 100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-to-left {
+  0% {
+    transform: translateX(0);
+  } 100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide-from-right-favs {
+  0% {
+    transform: translateX(150%);
+  } 100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-to-right-favs {
+  0% {
+    transform: translateX(0);
+  } 100% {
+    transform: translateX(150%);
+  }
+}
+.rotate-right {
+  animation: .5s rotateRight;
+  animation-fill-mode: forwards;
+}
+.undo-rotate-right {
+  animation: .5s undoRotateRight;
+  animation-fill-mode: forwards;
+}
+.rotate-left {
+  animation: .5s rotateLeft;
+  animation-fill-mode: forwards;
+}
+.undo-rotate-left {
+  animation: .5s undoRotateLeft;
+  animation-fill-mode: forwards;
+}
+.fade-out {
+  animation: .5s fadeOut;
+  animation-fill-mode: forwards;
+}
+.fade-in {
+  animation: .5s fadeIn;
+  animation-fill-mode: forwards;
+}
+.fade-out-overlay {
+  animation: 1s fadeOut;
+  animation-fill-mode: forwards;
+}
+.fade-in-overlay {
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+}
+.slide-to-right {
+  animation: 1s slide-to-right;
+  animation-fill-mode: forwards;
+}
+.slide-to-left {
+  animation: 1s slide-to-left;
+  animation-fill-mode: forwards;
+}
+.show-favs {
+  animation: 1s slide-from-right-favs;
+  animation-fill-mode: forwards;
+}
+.hide-favs {
+  animation: 1s slide-to-right-favs;
+  animation-fill-mode: forwards;
+}

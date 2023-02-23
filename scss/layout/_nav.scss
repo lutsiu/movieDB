@@ -1,0 +1,46 @@
+header {
+  height: min-content;
+}
+.nav {
+  padding: 1rem 2rem;
+  height: inherit;
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  max-width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0,0,0,0.4);
+  &__element {
+    max-height: inherit;
+    max-width: min-content;
+    position: relative;
+    &:nth-child(2) {
+      display: flex;
+    }
+  }
+  &__section {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 0 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav {
+
+    &__section{
+      padding-top: .6rem;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .nav {
+    &__section{
+      padding-top: 0;
+      span {
+        display: none;
+      }
+    }
+  }
+}
