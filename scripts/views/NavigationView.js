@@ -1,17 +1,17 @@
 import View from "./View.js";
 export default class NavigationView extends View{
-  constructor({nav, overlay, searchOverlayBtn, searchNavBtn, hamburger, navFavs, heart} = {}) {
+  constructor() {
     super();
     this.els = {
-      nav: document.querySelector(nav),
-      overlay: document.querySelector(overlay),
+      nav: document.querySelector('.nav'),
+      overlay: document.querySelector('.overlay'),
       overlayGenre: document.querySelectorAll('.overlay__list__item'),
-      btnSearchOverlay: document.querySelector(searchOverlayBtn),
-      btnSearchNav: document.querySelector(searchNavBtn),
-      hamburger: document.querySelector(hamburger),
+      btnSearchOverlay: document.querySelector('.search--overlay'),
+      btnSearchNav: document.querySelector('.search--nav'),
+      hamburger: document.querySelector('.hamburger'),
       spans: document.querySelectorAll('.hamburger span'),
-      navFavourites: document.querySelector(navFavs),
-      navHeart: document.getElementById(heart),
+      navFavourites: document.querySelector('.nav__section'),
+      navHeart: document.getElementById('heart'),
       overlayGenres: document.querySelector('.overlay__movies-genres'),
       overlaySearchBox: document.querySelector('.overlay__search-movie'),
       favourites: document.querySelector('.favourites'),

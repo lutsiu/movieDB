@@ -417,7 +417,6 @@ header {
 .home {
   max-width: 100vw;
   height: 100vh;
-  background-image: url("https://image.tmdb.org/t/p/original//mDfJG3LC3Dqb67AZ52x3Z0jU0uB.jpg");
   background-repeat: no-repeat;
   background-position: 50% 30%;
   background-size: cover;

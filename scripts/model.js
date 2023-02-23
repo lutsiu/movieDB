@@ -15,9 +15,14 @@ export default class Model {
   }
   // create movie gets data from another functions and then returns object 
   createMovieObj(data) {
-    console.log(data);
     return {
-
+      id: data.id,
+      title: data.title,
+      poster: `https://image.tmdb.org/t/p/original/${data.poster_path}`,
+      backdrop: `https://image.tmdb.org/t/p/original/${data.backdrop_path}`,
+      release: data.release_date.slice(0,4),
+      rate: data.vote_average.toFixed(2),
+      overview: data.overview,
     };
   }
   /* 
@@ -37,8 +42,8 @@ export default class Model {
         return {
           id: movie.id,
           title: movie.title,
-          poster: `https://image.tmdb.org/t/p/${'w500'}/${movie.poster_path}`,
-          backdrop: `https://image.tmdb.org/t/p/${'w500'}/${movie.backdrop_path}`,
+          poster: `https://image.tmdb.org/t/p/original/${movie.poster_path}`,
+          backdrop: `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`,
           release: movie.release_date.slice(0,4),
           rate: movie.vote_average.toFixed(2),
           overview: movie.overview,
@@ -47,6 +52,19 @@ export default class Model {
     } catch(err) {
       console.log(err);
     }
+  }
+
+  // 1. load data from AJAX
+  // 2. add this data to the id or movie or etc
+  // 3. create obj by this id
+  // 4. use this in function
+  async getDataById(id) {
+    const data = await AJAX('id', {id: id});
+    const obj = this.createMovieObj(data);
+    return obj;
+  }
+  addMovieToTheList(movie) {
+    this.state.favMovies.push(movie);
   }
 } 
 

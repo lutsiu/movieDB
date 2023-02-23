@@ -22,19 +22,13 @@ export default async function(req, {title = 'forest gump', id = 238, page = 1, q
   }
   // id 
   if (req === 'id') {
-    const res = await fetch(`
-    ${url}/movie/${id}?api_key=${key}&language=en-US`);
-    const film = await fetchData(res);
-    console.log(film);
-    return film;
+    return getMovieById(id);
   }
 
   if (req === 'img') {
     // single img is working
     if (singleImg) {
-      const res = await fetch(`
-    ${url}/movie/${id}?api_key=${key}&language=en-US`);
-      const film = await fetchData(res);
+      const film = await getMovieById(id);
       const path = `https://image.tmdb.org/t/p/${qual}/${film.poster_path}`;
       return path;
     }
@@ -58,6 +52,12 @@ export default async function(req, {title = 'forest gump', id = 238, page = 1, q
 const fetchData = async function(res) {
   const data = await res.json();
   return await data;
+}
+const getMovieById = async function(id) {
+  const res = await fetch(`
+    ${url}/movie/${id}?api_key=${key}&language=en-US`);
+    const film = await fetchData(res);
+    return film;
 }
 // query to search film by title
 
