@@ -1,0 +1,45 @@
+.trailer {
+  width: 50%;
+  max-width: 90%;
+  background-color: rgba(11, 11, 11, 0.7) ;
+  border-radius: 1rem;
+  overflow: hidden;
+  &__video {
+    position: relative;
+    height: 35rem;
+    @include backgroundImage;
+  }
+  &__content {
+    position: relative;
+    padding: 1rem;
+  }
+  iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height:100% ;
+  }
+  &__cross {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+  }
+  &__title {
+    margin-bottom: .5rem;
+  }
+  &__rating {
+    font-size: 2rem;
+
+  }
+}
+@media screen and (max-width: 998px) {
+  .trailer {
+    width: 80%;
+  }
+}
+/* @media screen and (max-width: 568px) {
+  .trailer {
+    width: 80%;
+  }
+} */

@@ -15,10 +15,10 @@ export default async function(req, {title = 'forest gump', id = 238, page = 1, q
   }
   // trailer is ok
   if (req === 'trailer') {
-    const res = await fetch(`${url}/movie/${id}/videos?api_key=${key}&language=en-US`); // replace 238 on video id
+    const res = await fetch(`${url}/movie/${id}/videos?api_key=${key}&language=en-US`); 
     const data = await fetchData(res);
-    console.log(data);
-    return `https://www.youtube.com/watch?v=${data.results[0].key}`;
+    console.log(data.results);
+    return data.results.length > 0 ? data.results[0].key : 'poster';
   }
   // id 
   if (req === 'id') {

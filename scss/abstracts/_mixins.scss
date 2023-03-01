@@ -1,0 +1,11 @@
+@mixin overlayCenter {
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@mixin backgroundImage {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

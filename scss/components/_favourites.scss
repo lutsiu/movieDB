@@ -5,7 +5,7 @@
   right: 0;
   width: 23rem;
   background-color: $black-genres;
-  transition: all .5s;
+  transform: translateX(200%);
   &__item {
     display: flex;
     padding: 1rem 1rem 1rem 0;

@@ -23,6 +23,7 @@ export default class Model {
       release: data.release_date.slice(0,4),
       rate: data.vote_average.toFixed(2),
       overview: data.overview,
+
     };
   }
   /* 
@@ -37,7 +38,7 @@ export default class Model {
       // get array of movies by query
       const data = await AJAX('title', {title: query, page: 1});
       // filter movies with poster
-      const movies = data.results.filter((movie, i) => movie.backdrop_path && movie.poster_path && i < 6);
+      const movies = data.results.filter((movie, i) => movie.backdrop_path && movie.poster_path && i < 10);
       this.state.search.results = movies.map(movie => {
         return {
           id: movie.id,
@@ -47,6 +48,7 @@ export default class Model {
           release: movie.release_date.slice(0,4),
           rate: movie.vote_average.toFixed(2),
           overview: movie.overview,
+          
         };
       });
     } catch(err) {
@@ -62,6 +64,10 @@ export default class Model {
     const data = await AJAX('id', {id: id});
     const obj = this.createMovieObj(data);
     return obj;
+  }
+  async getTrailer(id) {
+    const trailer = await AJAX('trailer', {id: id});
+    return trailer ;
   }
   addMovieToTheList(movie) {
     this.state.favMovies.push(movie);

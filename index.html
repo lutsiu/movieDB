@@ -9,8 +9,17 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="scripts/controller.js" type="module"></script>
 </head>
-<body>
-  <div class="overlay u-hidden">
+<body >
+  <div class="overlay ">
+    <!-- SPINNER -->
+    <div class="overlay__spinner">
+      <img src="./svg/spinner.svg" alt="spinner">
+    </div>
+    <!-- CROSS -->
+    <div class="overlay__cross">
+      <i class="fa-solid fa-xmark cross overlay__x"></i>
+    </div>
+    <!-- GENRES -->
     <div class="overlay__movies-genres">
       <ul class="overlay__element overlay__list">
         <li class="overlay__list__item overlay__list__item-1">
@@ -45,15 +54,17 @@
         </li>
       </ul>
     </div>
+    <!-- SEARCH BOX -->
     <div class="overlay__search-movie">
       <form class="search-box">
         <input type="text" name="search-movie" id="search-movie" placeholder="Search movies you want">
       </form>
       <i class="fa-solid fa-magnifying-glass search search--overlay"></i>
     </div>
+    <!-- FAVOURITES -->
     <div class="overlay__favourites favourites">
       <ul class="favourites__list">
-        <li class="favourites__item">
+        <!-- <li class="favourites__item">
           <div class="favourites__img">
           </div>
           <div class="favourites__content">
@@ -75,7 +86,6 @@
             </div>
           </div>
         </li>
-
         <li class="favourites__item"> 
           <div class="favourites__img">
           </div>
@@ -101,9 +111,14 @@
         <li class="favourites__pagination">
           <button class="btn btn--pagination btn--pagination--prev">Previous</button>
           <button class="btn btn--pagination btn--pagination--next">Next</button>
-        </li>
+        </li> -->
       </ul>
     </div>
+    <!-- Search results -->
+    <div class="overlay__results results">
+      
+    </div>
+    
   </div>
   <header>
     <nav class="nav">
@@ -120,9 +135,8 @@
           <i class="fa-solid fa-magnifying-glass search search--nav"></i>
         </div>
         <div class="nav__element">
-          <div class="nav__section">
+          <div class="nav__favourites">
             <i class="fa-solid fa-heart fa-heart-nav" id="heart"></i>
-            <span class="span span--navigation">Favourites</span>
           </div>
         </div>
     </nav>

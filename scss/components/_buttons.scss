@@ -21,7 +21,7 @@
     cursor: pointer;
     transition: all .5s;
   }
-  &--home {
+  &--black {
     padding: 1.5rem;
     font-size: 1.5rem;
     transition: all .3s;
@@ -39,10 +39,15 @@
   }
 
 }
+.black-buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
 @media screen and (max-width: 576px) {
   .btn {
 
-    &--home {
+    &--black {
       padding: 1rem;
       font-size: 1.4rem;
     }

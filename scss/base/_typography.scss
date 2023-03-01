@@ -14,6 +14,11 @@ body {
     color: #e7dddd;
     margin-left: 1rem;
   }
+  &--tertiary {
+    font-size: calc(1.5rem + 1vw);
+    line-height: 4rem;
+    
+  }
   &--quaternary {
     font-size: 1.4rem;
     font-weight: 400;
@@ -35,10 +40,13 @@ body {
   }
 }
 .paragraph {
-
+  font-size: 1.4rem;
+  max-width: 75%;
   &--main {
-    font-size: 1.4rem;
     margin-left: 1rem;
+  }
+  &--error {
+    font-size: 1.5rem;
   }
 }
 
@@ -47,6 +55,9 @@ body {
 
     &--main {
       font-size: 4rem;
+    }
+    &--quaternary {
+      font-size: 1.4rem;
     }
   }
   
@@ -57,6 +68,22 @@ body {
     &--main {
       font-size: 4rem;
       line-height: 5rem;
+    }
+    &--quaternary {
+      font-size: 1.3rem;
+    }
+  }
+  
+}
+@media screen and (max-width: 576px) {
+  .title {
+
+    &--main {
+      font-size: 2.5rem;
+      line-height: 5rem;
+    }
+    &--quaternary {
+      font-size: 1.3rem;
     }
   }
   

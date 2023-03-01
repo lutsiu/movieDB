@@ -13,6 +13,27 @@
     transform: scale(1.2);
   }
 }
-@media screen and (max-width: 576px) {
+.cross {
+  font-size: 4rem;
+  cursor: pointer;
+}
+.fa-check {
+  font-size: 4rem;
+  cursor: pointer;
+}
+.fa-circle-chevron-down {
+  font-size: 4rem;
+}
+@media screen and (max-width: 992px) {
+  .fa-circle-chevron-down {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
 
+}
+@media screen and (max-width: 576px) {
+  .fa-circle-chevron-down {
+    font-size: 2rem;
+  }
 }

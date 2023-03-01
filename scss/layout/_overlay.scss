@@ -7,14 +7,16 @@
   right: 0;
   bottom: 0;
   background-color: $black-overlay;
-/*   & > * {
-    display: none;
-  } */
   &__spinner {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+  &__cross {
+    position: absolute;
+    top: 0;
+    left: 2rem;
   }
   &__movies-genres {
     transform: translateX(-100%);
@@ -67,5 +69,11 @@
     top: 1.4rem;
     left: 50%;
     transform: translateX(-50%);
+  }
+  &__trailer {
+    @include overlayCenter;
+  }
+  &__results {
+    @include overlayCenter;
   }
 }

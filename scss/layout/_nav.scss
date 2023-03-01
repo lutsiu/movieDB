@@ -19,7 +19,7 @@ header {
       display: flex;
     }
   }
-  &__section {
+  &__favourites {
     display: flex;
     justify-content: space-between;
     gap: 4rem;
@@ -29,7 +29,7 @@ header {
 @media screen and (max-width: 768px) {
   .nav {
 
-    &__section{
+    &__favourites{
       padding-top: .6rem;
     }
   }
