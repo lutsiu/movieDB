@@ -128,9 +128,10 @@ export default class OverlayView extends View {
     this.switchOverlay(true);
     this.switchNav(false);
   }
-  createTrailer(data) {
+  createTrailer(data, handler, handlerUpdate, favs) {
+    const isOnFavList = favs.some(fav => fav.id === data.id);
     const html = `
-    <div class="overlay__trailer trailer" data-film-id="${data.id}>
+    <div class="overlay__trailer trailer"  data-film-id="${data.id}">
       <div class="trailer__video">
         <div id="player"></div>
         <div class="trailer__cross">
@@ -141,7 +142,7 @@ export default class OverlayView extends View {
         <h3 class="title--tertiary trailer__title">${data.title}</h3>
         <div class="black-buttons-container">
           <span class="trailer__rating">Rate:${data.rate}</span>
-          <span class="btn btn--black btn--list" data-film-id="${data.id}"><i class="fa-solid fa-plus"></i>My list</span>
+          <span class="btn btn--black btn--list">${isOnFavList ? `<i class="fa-solid fa-check"></i>` : '<i class="fa-solid fa-plus">'}</i>My list</span>
         </div>
         <p class="paragraph u-margin-top--small">${data.overview}</p>
       </div>
@@ -150,12 +151,19 @@ export default class OverlayView extends View {
     this.overlay.insertAdjacentHTML('beforeend', html);
     this.trailer = this.overlay.querySelector('.overlay__trailer');
     this.trailerCross = this.trailer.querySelector('.trailer__cross');
+    this.trailerListBtn = this.trailer.querySelector('.btn--list');
     this.createIframe(data.trailer);
     this.switchOverlay(true);
     this.trailer.classList.add('fade-in');
     this.switchNav(false);
+    // if user clicks on list button
+    this.trailerListBtn.addEventListener('click', handler.bind(null, this.trailer.dataset.filmId));
+    this.trailerListBtn.addEventListener('click', handlerUpdate.bind(this));
+    // if user clicks on cross
     this.trailerCross.addEventListener('click', this.stopVideo.bind(this));
+    
   }
+
 
   createIframe(trailer) {
     this.player = new YT.Player('player', {
@@ -188,7 +196,7 @@ export default class OverlayView extends View {
   
   hideAll(hide, e) {
     if (e.target !== this.overlay && !e.target.closest('.overlay__list__item') &&
-        e.target !== this.cross && e.target !==this.overlayResults && 
+        e.target !== this.cross && e.target !==this.overlayResults && !e.target.closest('.favourites__item') &&
      !hide) return;
     if (this.player) this.stopVideo();
     this.switchOverlay(false);

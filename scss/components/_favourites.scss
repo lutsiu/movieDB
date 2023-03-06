@@ -11,18 +11,18 @@
     padding: 1rem 1rem 1rem 0;
     transition: all .5s;
     border-radius: 1rem;
-    &:not(:last-child) {
+    &:not(.favourites__pagination) {
       height:23vh;
       gap: 1rem;
       cursor: pointer;
     }
-    &:not(:last-child):hover {
+    &:not(.favourites__pagination):hover {
       background-color:$black-genres--hover;
     }
   }
   &__img {
     flex: 2;
-    background-image: url('https://image.tmdb.org/t/p/w500//kWYfW2Re0rUDE6IHhy4CRuKWeFr.jpg');
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

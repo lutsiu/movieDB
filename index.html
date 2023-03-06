@@ -10,7 +10,7 @@
   <script src="scripts/controller.js" type="module"></script>
 </head>
 <body >
-  <div class="overlay ">
+  <div class="overlay fade-in">
     <!-- SPINNER -->
     <div class="overlay__spinner">
       <img src="./svg/spinner.svg" alt="spinner">
@@ -26,7 +26,7 @@
           <a href="#home" class="overlay__list__category overlay__list__category-1">Main page</a>
         </li>
         <li class="overlay__list__item overlay__list__item-2">
-          <a href="#" class="overlay__list__category overlay__list__category-2">Fantasies</a>
+          <a href="#fantasies" class="overlay__list__category overlay__list__category-2">Fantasies</a>
         </li>
         <li class="overlay__list__item overlay__list__item-3">
           <a href="#" class="overlay__list__category overlay__list__category-3">Comedies</a>
@@ -64,54 +64,11 @@
     <!-- FAVOURITES -->
     <div class="overlay__favourites favourites">
       <ul class="favourites__list">
-        <!-- <li class="favourites__item">
-          <div class="favourites__img">
-          </div>
-          <div class="favourites__content">
-            <h4 class="favourites__title title--quaternary">The curious case of Bedgamin button<span class="span--year">(1999)</span></h4>
-            <div class="favourites__info">
-              <span class="span--rating-small">Rate: 8.6</span>
-              <span class="btn btn--delete-fav">Delete</span>
-            </div>
-          </div>
-        </li>
-        <li class="favourites__item">
-          <div class="favourites__img">
-          </div>
-          <div class="favourites__content">
-            <h4 class="favourites__title title--quaternary">The curious case of Bedgamin button<span class="span--year">(1999)</span></h4>
-            <div class="favourites__info">
-              <span class="span--rating-small">Rate: 8.6</span>
-              <span class="btn btn--delete-fav">Delete</span>
-            </div>
-          </div>
-        </li>
-        <li class="favourites__item"> 
-          <div class="favourites__img">
-          </div>
-          <div class="favourites__content">
-            <h4 class="favourites__title title--quaternary">The curious case of Bedgamin button<span class="span--year">(1999)</span></h4>
-            <div class="favourites__info">
-              <span class="span--rating-small">Rate: 8.6</span>
-              <span class="btn btn--delete-fav">Delete</span>
-            </div>
-          </div>
-        </li>
-        <li class="favourites__item"> 
-          <div class="favourites__img">
-          </div>
-          <div class="favourites__content">
-            <h4 class="favourites__title title--quaternary">The curious case of Bedgamin button<span class="span--year">(1999)</span></h4>
-            <div class="favourites__info">
-              <span class="span--rating-small">Rate: 8.6</span>
-              <span class="btn btn--delete-fav">Delete</span>
-            </div>
-          </div>
-        </li>
+        
         <li class="favourites__pagination">
           <button class="btn btn--pagination btn--pagination--prev">Previous</button>
           <button class="btn btn--pagination btn--pagination--next">Next</button>
-        </li> -->
+        </li>
       </ul>
     </div>
     <!-- Search results -->
@@ -145,8 +102,57 @@
   </header>
   <main>
     <div class="container">
-      <div class="home" id="home">
-        
+      <div class="home" id="home"></div>
+      <div class="genres genres--fantasies" id="fantasies">
+        <div class="genres__title">Fantasies</div>
+        <div class="genres__button genres__button--prev">
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="genres__button genres__button--next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="genres__container">
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//wuMc08IPKEatf9rnMNXvIDxqP4W.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//npCPnwDyWfQltGfIZKN6WqeUXGI.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//14QbnygCuTO0vl7CAFmPf1fgZfV.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//urDWNffjwmNi5IQaezw9GwqkUXa.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//3RBrmMTaYaHRAgTAxhbGsWhsOYn.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//wqnLdwVXoBjKibFRR5U3y0aDUhs.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//ySaaKHOLAQU5HoZqWmzDIj1VvZ1.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//urDWNffjwmNi5IQaezw9GwqkUXa.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//wuMc08IPKEatf9rnMNXvIDxqP4W.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//npCPnwDyWfQltGfIZKN6WqeUXGI.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//14QbnygCuTO0vl7CAFmPf1fgZfV.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//urDWNffjwmNi5IQaezw9GwqkUXa.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//3RBrmMTaYaHRAgTAxhbGsWhsOYn.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//wqnLdwVXoBjKibFRR5U3y0aDUhs.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//ySaaKHOLAQU5HoZqWmzDIj1VvZ1.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+          <div class="genres__movie" data-film-id="671" style="background-image: url('https://image.tmdb.org/t/p/original//urDWNffjwmNi5IQaezw9GwqkUXa.jpg')" title="Harry Potter and the Philosopher's Stone">
+          </div>
+        </div>
       </div>
     </div>
 

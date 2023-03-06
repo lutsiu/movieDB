@@ -8,12 +8,13 @@ export default class Model {
       search: {
         query: '',
         results: [],
+        page: 1,
+        resultsPerPage: 4,
       },
       favMovies: [],
-      page: 1
     };
   }
-  // create movie gets data from another functions and then returns object 
+
   createMovieObj(data) {
     return {
       id: data.id,
@@ -26,12 +27,7 @@ export default class Model {
 
     };
   }
-  /* 
-    1. Load results from query +
-    2. create movies objects 
-    3. update results in state
-    4. in controller fetch this data to view in order to render this results on the page
-  */
+
   async loadSearchResults(query) {
     try {
       this.state.search.query = query;
@@ -56,22 +52,51 @@ export default class Model {
     }
   }
 
-  // 1. load data from AJAX
-  // 2. add this data to the id or movie or etc
-  // 3. create obj by this id
-  // 4. use this in function
   async getDataById(id) {
-    const data = await AJAX('id', {id: id});
-    const obj = this.createMovieObj(data);
-    return obj;
+    try {
+      const data = await AJAX('id', {id: id});
+      const obj = this.createMovieObj(data);
+      return obj;
+    } catch(e) {
+      '';
+    }
   }
   async getTrailer(id) {
-    const trailer = await AJAX('trailer', {id: id});
-    return trailer ;
+    try {
+      const trailer = await AJAX('trailer', {id: id});
+      return trailer ;
+    } catch(e) {
+      '';
+    }
   }
-  addMovieToTheList(movie) {
-    this.state.favMovies.push(movie);
+
+  addToFavs(data) {
+    this.state.favMovies.push(data);
+    this.saveData();
   }
+
+  deleteFromFavs(data) {
+    const index = this.state.favMovies.findIndex(movie => movie.id === data.id);
+    this.state.favMovies.splice(index, 1);
+    this.saveData();
+  }
+  saveData() {
+    localStorage.setItem('favourites', JSON.stringify(this.state.favMovies));
+  }
+  restoreData() {
+    const savedData = JSON.parse(localStorage.getItem('favourites'));
+    this.state.favMovies = savedData;
+  }
+
+  getFavPage(page = this.state.search.page) {
+    this.state.search.page = page;
+    
+    const start = (page - 1) * this.state.search.resultsPerPage;
+    const end = page * this.state.search.resultsPerPage;
+
+    return this.state.favMovies.slice(start, end);
+  }
+
 } 
 
 
