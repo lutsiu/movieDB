@@ -96,7 +96,14 @@ export default class Model {
 
     return this.state.favMovies.slice(start, end);
   }
-
+  async getFilmsByGenre(genre) {
+    try {
+      const data = await AJAX('genre', {genre: genre});
+      return data.results;
+    } catch(e) {
+      '';
+    }
+  }
 } 
 
 

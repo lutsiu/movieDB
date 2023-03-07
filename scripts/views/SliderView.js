@@ -1,10 +1,10 @@
 export default class SliderView {
-  constructor() {
-    this.slider = document.querySelector('.genres__container');
-    this.slides = Array.from(this.slider.children);
-    this.buttons =  document.querySelectorAll('.genres__button');
+  constructor(container) {
+    this.container = document.getElementById(container);
+    this.slider = this.container.querySelector('.genres__container');
+    this.buttons = this.container.querySelectorAll('.genres__button');
+    this.title = container.replace(container[0], container[0].toUpperCase()).replaceAll('-', ' ');
     this.click = 0;
-    this.init();
   }
   init() {
     // determine how many slides will be scrolled per click
@@ -31,8 +31,32 @@ export default class SliderView {
       btn.addEventListener('click', this.transform.bind(this, btn));
     });
   }
+  createMarkup(data) {
+    // create slides
+    const html = data.map(movie => {
+      return `
+      <div class="genres__movie" data-film-id="${movie.id}" style="background-image: url('https://image.tmdb.org/t/p/original//${movie.poster_path}')" title="${movie.title}">
+      </div>
+      `;
+    });
+    /* insert html */
+    html.forEach(markup => {
+      this.slider.insertAdjacentHTML('beforeend', markup);
+    });
+    this.slides = Array.from(this.slider.children);
+    /* start programm */
+    this.init();
+  }
+  showTrailer(handler) {
+    this.slides.forEach(slide => {
+      slide.addEventListener('click', e => {
+        const target = e.target.closest('.genres__movie');
+        if (!target) return;
+        handler(target.dataset.filmId);
+      });
+    });
+  }
   transform(btn, e) {
-    const slides = this.slides.length;
     if (btn.classList.contains('genres__button--prev')) {
       this.click--;
       if (this.click === -1) {
@@ -54,7 +78,6 @@ export default class SliderView {
   }
   changeTransform(click) {
     const distance = click * (this.slideWidth * this.slidesPerClick);
-    console.log(distance);
     this.slider.style.transform = `translateX(-${distance + click * this.remainder}px)`;
   }
 }

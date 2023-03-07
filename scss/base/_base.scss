@@ -5,6 +5,10 @@
 }
 :root {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+main {
+  flex: 1;
 }
 a {
   text-decoration: none;

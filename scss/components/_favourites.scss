@@ -22,11 +22,12 @@
   }
   &__img {
     flex: 2;
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 1rem;
+  
+  }
+  &__poster {
+    object-fit: cover;
+    @include backgroundImage;
+    width: 100%;
   }
   &__content {
     flex: 3;

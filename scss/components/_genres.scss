@@ -2,10 +2,13 @@
   width: 100vw;
   padding: 1rem;
   position: relative;
-  
+  &:not(&:last-child){
+    margin-bottom: 5rem;
+  }
   &__title {
     font-size: 3rem;
     letter-spacing: .4rem;
+    margin-left: 1rem;
   }
   &__button {
     position: absolute;
@@ -17,7 +20,7 @@
     justify-content: center;
     align-items: center;
     transition: all .4s;
-    z-index: 10;
+    z-index: 2;
     cursor: pointer;
     &--prev {
       left: 1rem;
@@ -43,9 +46,9 @@
   }
   &__movie {
     @include backgroundImage;
+    background-position: top;
     flex: 0 0 auto;
     width: 20%;
-    /* width: 19%; */
     height: 25rem;
     transition: all .5s;
     cursor: pointer;
@@ -72,6 +75,9 @@
 
 @media screen and (max-width: 568px) {
   .genres {
+    &__title {
+      font-size: 2.5rem;
+    }
     &__movie {
       width: 50%;
       height: 17rem;

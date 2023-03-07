@@ -1,5 +1,5 @@
 import {key, url} from './config.js';
-export default async function(req, {title = 'forest gump', id = 238, page = 1, qual = 'w500', singleImg} = {}) {
+export default async function(req, {title = 'forest gump', id = 238, page = 1, qual = 'w500', singleImg, genre} = {}) {
   // title is ok
   if (req === 'title') {
     const res = await fetch(`
@@ -8,9 +8,9 @@ export default async function(req, {title = 'forest gump', id = 238, page = 1, q
     return data;
   }
   // top rated is ok
-  if (req === 'topRated') {
-    const res = await fetch(`${url}/movie/top_rated?api_key=${key}&page=${page}`); 
-    const data = await fetchData(res);
+  if (req === 'genre') {
+    const res = await fetch(`${url}/discover/movie?api_key=${key}&with_genres=${genre}&vote_average=7&with_original_language=en`);
+    const data = await res.json();
     return data;
   }
   // trailer is ok

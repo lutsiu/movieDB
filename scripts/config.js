@@ -6,6 +6,9 @@ export const moviesForPoster = [
   {title: 'hobbit 2', id: 57158},
   {title: 'hobbit 3', id: 122917},
 ];
+export const chooseRandom = function(quantity) {
+  return Math.floor(Math.random() * quantity);
+}
 // query to search film by title
 
 /* const res = await fetch(`

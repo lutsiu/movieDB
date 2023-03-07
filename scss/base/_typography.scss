@@ -6,6 +6,9 @@ body {
   color: $white;
   background-color: $black-dark;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .title {
   &--main { 
@@ -21,6 +24,13 @@ body {
   }
   &--quaternary {
     font-size: 1.4rem;
+    font-weight: 400;
+  }
+  &--footer {
+    font-size: 2rem;
+  }
+  &--author {
+    font-size: 2rem;
     font-weight: 400;
   }
 }
@@ -84,6 +94,9 @@ body {
     }
     &--quaternary {
       font-size: 1.3rem;
+    }
+    &--author {
+      font-size: 2rem;
     }
   }
   

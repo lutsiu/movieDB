@@ -1,0 +1,55 @@
+.footer {
+  padding: 1rem;
+  margin-top: auto;
+  background-color: $black--font;
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__mdb {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 10rem;
+  }
+  #tmdb {
+    margin-top: 1rem;
+    width: 100%;
+    height: 100%;
+  }
+  &__info {
+    display: flex;
+    gap: 2rem;
+
+  }
+  &__social {
+    i {
+      font-size: 4rem;
+      transition: all .4s;
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+}
+@media screen and (max-width: 568px) {
+  .footer {
+    gap: 3rem;
+    &__mdb {
+      margin: 0;
+      max-width: 15rem;
+    }
+    #tmdb {
+      width: 8rem;
+      height: 8rem;
+    }
+    &__social {
+      i {
+        font-size: 3rem;
+        transition: all .4s;
+
+      }
+    }
+  }
+}

@@ -9,7 +9,9 @@ export default class Favouritesview {
     const html = movies.map(data => {
       return `
       <li class="favourites__item" data-film-id="${data.id}">
-        <div class="favourites__img" style="background-image: url('${data.backdrop}')"></div>
+        <div class="favourites__img">
+        <img class ="favourites__poster" src="${data.backdrop}">
+        </div>
         <div class="favourites__content">
           <h4 class="favourites__title title--quaternary">${data.title}<span class="span--year">(${data.release})</span></h4>
           <div class="favourites__info">
